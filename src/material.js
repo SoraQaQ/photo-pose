@@ -1,0 +1,8 @@
+import { FilesetResolver, PoseLandmarker } from '@mediapipe/tasks-vision';
+import { drawSkeleton } from './draw.js';
+let points=null, image=null, detector=null;
+const $=s=>document.querySelector(s);
+$('#image').onchange=e=>{const file=e.target.files[0];if(!file)return;points=null;$('#save').disabled=true;image=new Image();image.onload=()=>{const canvas=$('#canvas');canvas.width=image.naturalWidth;canvas.height=image.naturalHeight;canvas.getContext('2d').drawImage(image,0,0);URL.revokeObjectURL(image.src);};image.src=URL.createObjectURL(file);};
+/** 对本地授权图片提取姿态关键点并展示可供审核的骨架。 */
+$('#extract').onclick=async()=>{if(!image?.complete){$('#status').textContent='请先选择图片';return;}try{$('#status').textContent='正在加载模型并提取';if(!detector){const vision=await FilesetResolver.forVisionTasks('/wasm');detector=await PoseLandmarker.createFromOptions(vision,{baseOptions:{modelAssetPath:'/pose_landmarker_lite.task'},runningMode:'IMAGE',numPoses:1});}points=detector.detect(image).landmarks?.[0];if(!points)throw Error('未检测到人物，请选择全身清晰的图片');const c=$('#canvas'),ctx=c.getContext('2d');ctx.drawImage(image,0,0);drawSkeleton(ctx,points,c.width,c.height,'#b9ff4d');$('#save').disabled=false;$('#status').textContent='请检查骨架并填写名称和描述';}catch(e){$('#status').textContent=e.message;}};
+$('#save').onclick=()=>{const name=$('#name').value.trim(),description=$('#description').value.trim();if(!points||!name||!description){$('#status').textContent='请填写名称和动作描述';return;}const blob=new Blob([JSON.stringify({name,scene:$('#scene').value,description,points},null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='pose.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};

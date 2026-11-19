@@ -1,0 +1,172 @@
+{
+  "name": "示例姿势",
+  "scene": "park",
+  "description": "自然站立，双手放松。",
+  "points": [
+    {
+      "x": 0.5,
+      "y": 0.14,
+      "visibility": 1
+    },
+    {
+      "x": 0.5,
+      "y": 0.5,
+      "visibility": 0
+    },
+    {
+      "x": 0.5,
+      "y": 0.5,
+      "visibility": 0
+    },
+    {
+      "x": 0.5,
+      "y": 0.5,
+      "visibility": 0
+    },
+    {
+      "x": 0.5,
+      "y": 0.5,
+      "visibility": 0
+    },
+    {
+      "x": 0.5,
+      "y": 0.5,
+      "visibility": 0
+    },
+    {
+      "x": 0.5,
+      "y": 0.5,
+      "visibility": 0
+    },
+    {
+      "x": 0.5,
+      "y": 0.5,
+      "visibility": 0
+    },
+    {
+      "x": 0.5,
+      "y": 0.5,
+      "visibility": 0
+    },
+    {
+      "x": 0.5,
+      "y": 0.5,
+      "visibility": 0
+    },
+    {
+      "x": 0.5,
+      "y": 0.5,
+      "visibility": 0
+    },
+    {
+      "x": 0.39,
+      "y": 0.28,
+      "visibility": 1
+    },
+    {
+      "x": 0.61,
+      "y": 0.28,
+      "visibility": 1
+    },
+    {
+      "x": 0.34,
+      "y": 0.41,
+      "visibility": 1
+    },
+    {
+      "x": 0.66,
+      "y": 0.41,
+      "visibility": 1
+    },
+    {
+      "x": 0.32,
+      "y": 0.54,
+      "visibility": 1
+    },
+    {
+      "x": 0.68,
+      "y": 0.54,
+      "visibility": 1
+    },
+    {
+      "x": 0.5,
+      "y": 0.5,
+      "visibility": 0
+    },
+    {
+      "x": 0.5,
+      "y": 0.5,
+      "visibility": 0
+    },
+    {
+      "x": 0.5,
+      "y": 0.5,
+      "visibility": 0
+    },
+    {
+      "x": 0.5,
+      "y": 0.5,
+      "visibility": 0
+    },
+    {
+      "x": 0.5,
+      "y": 0.5,
+      "visibility": 0
+    },
+    {
+      "x": 0.5,
+      "y": 0.5,
+      "visibility": 0
+    },
+    {
+      "x": 0.43,
+      "y": 0.57,
+      "visibility": 1
+    },
+    {
+      "x": 0.57,
+      "y": 0.57,
+      "visibility": 1
+    },
+    {
+      "x": 0.43,
+      "y": 0.73,
+      "visibility": 1
+    },
+    {
+      "x": 0.58,
+      "y": 0.73,
+      "visibility": 1
+    },
+    {
+      "x": 0.43,
+      "y": 0.91,
+      "visibility": 1
+    },
+    {
+      "x": 0.59,
+      "y": 0.91,
+      "visibility": 1
+    },
+    {
+      "x": 0.5,
+      "y": 0.5,
+      "visibility": 0
+    },
+    {
+      "x": 0.5,
+      "y": 0.5,
+      "visibility": 0
+    },
+    {
+      "x": 0.5,
+      "y": 0.5,
+      "visibility": 0
+    },
+    {
+      "x": 0.5,
+      "y": 0.5,
+      "visibility": 0
+    }
+  ]
+}
